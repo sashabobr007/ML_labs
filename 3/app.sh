@@ -1,1 +1,1 @@
-optuna-dashboard postgresql://posgres:1234@localhost:5433/optuna
+optuna-dashboard postgresql://posgres:saSha17122002@localhost/car_app

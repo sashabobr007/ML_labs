@@ -60,6 +60,6 @@ pruner2 = optuna.pruners.MedianPruner()
 
 # Оптимизация с sampler1 и pruner1
 logging.basicConfig(level=logging.INFO, handlers=[logging.StreamHandler(sys.stdout)])
-study1 = optuna.create_study(direction="minimize", sampler=sampler1, pruner=pruner1, storage='postgresql://posgres:1234@localhost/optuna')
+study1 = optuna.create_study(direction="minimize", sampler=sampler1, pruner=pruner1, storage='postgresql://postgres:saSha17122002@localhost/car_app')
 study1.optimize(objective, n_trials=20)
 print(f"Study 1 best params: {study1.best_params}, best value: {study1.best_value}")
