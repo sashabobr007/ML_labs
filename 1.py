@@ -198,9 +198,9 @@ ex.find()
 ex.plot_animation()
 
 
-ex = GradientFind(f='(x**2 + y - 11)**2 + (x + y**2 - 7)**2', initial_params=np.array([-5,5]), treshold=0.001, learning_rate = 0.01, animation_interval_ms=1000)
-ex.find()
-ex.plot_animation()
+# ex = GradientFind(f='(x**2 + y - 11)**2 + (x + y**2 - 7)**2', initial_params=np.array([-5,5]), treshold=0.001, learning_rate = 0.01, animation_interval_ms=1000)
+# ex.find()
+# ex.plot_animation()
 
 
 

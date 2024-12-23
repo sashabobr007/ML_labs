@@ -1,0 +1,1 @@
+optuna-dashboard postgresql://posgres:1234@localhost:5433/optuna

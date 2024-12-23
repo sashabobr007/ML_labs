@@ -1,0 +1,25 @@
+services:
+  # Сервис PostgreSQL
+  db:
+    image: postgres:15  # Используем образ PostgreSQL
+    environment:
+      POSTGRES_DB: optuna  # Название базы данных
+      POSTGRES_USER: postgres  # Имя пользователя
+      POSTGRES_PASSWORD: 1234 # Пароль для пользователя
+    ports:
+      - 5432:5432  # Порт для доступа к PostgreSQL
+
+  # Сервис для вашего приложения на Python
+  app:
+    build: .
+    command: ["python3", "3.py"]
+
+  app-op:
+    build: .
+    command: ["/app/3/app.sh"]
+    ports:
+      - 8080:8080
+
+# Определим тома для сохранения данных
+volumes:
+  postgres_data:
